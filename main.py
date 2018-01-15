@@ -325,39 +325,39 @@ for label in ax.xaxis.get_ticklabels()[::2]:
 wl_BAB_12 = rebalance(wl_BAB, 48)
 excess_BAB_lb_12 = np.subtract(np.multiply(wl_BAB_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAB_lb_12.mean()
-# 0.0072477731180709505
+
 alpha_BAB_lb_12_CAPM = np.multiply(wl_BAB_12, alpha_CAPM).sum(axis=1)
 alpha_BAB_lb_12_FF5 = np.multiply(wl_BAB_12, alpha_FF5).sum(axis=1)
 alpha_BAB_lb_12_Car = np.multiply(wl_BAB_12, alpha_Car).sum(axis=1)
 alpha_BAB_lb_12_CAPM.mean()
-# 0.0080300682925910291
+
 alpha_BAB_lb_12_FF5.mean()
-# 0.00016889444607279499
+
 alpha_BAB_lb_12_Car.mean()
-# 0.0041367307191768968
+
 totalret_BAB_lb_12 = np.multiply(wl_BAB_12, stockret).sum(axis=1)
 sharpe_BAB_lb_12 = np.divide(excess_BAB_lb_12.mean(), np.std(totalret_BAB_lb_12))
 sharpe_BAB_lb_12
-# 0.19023678426163759
+
 
 # High Beta
 wh_BAB_12 = rebalance(wh_BAB, 48)
 excess_BAB_hb_12 = np.subtract(np.multiply(wh_BAB_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAB_hb_12.mean()
-# 0.0094302233727765646
+
 alpha_BAB_hb_12_CAPM = np.multiply(wh_BAB_12, alpha_CAPM).sum(axis=1)
 alpha_BAB_hb_12_FF5 = np.multiply(wh_BAB_12, alpha_FF5).sum(axis=1)
 alpha_BAB_hb_12_Car = np.multiply(wh_BAB_12, alpha_Car).sum(axis=1)
 alpha_BAB_hb_12_CAPM.mean()
-# 0.0028426277853265008
+
 alpha_BAB_hb_12_FF5.mean()
-# 0.0032801364132249771
+
 alpha_BAB_hb_12_Car.mean()
-# 0.0034637974492137073
+
 totalret_BAB_hb_12 = np.multiply(wh_BAB_12, stockret).sum(axis=1)
 sharpe_BAB_hb_12 = np.divide(excess_BAB_hb_12.mean(), np.std(totalret_BAB_hb_12))
 sharpe_BAB_hb_12
-# 0.13173255279211327
+
 
 # Low - High
 beta_BAB_lb_12 = rebalance(beta_L, 48)
@@ -365,7 +365,7 @@ beta_BAB_hb_12 = rebalance(beta_H, 48)
 excess_BAB_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAB_lb_12), excess_BAB_lb_12),
                                np.multiply(np.divide(1, beta_BAB_hb_12), excess_BAB_hb_12))
 excess_BAB_lh_12.mean()
-# 0.019939897910984838
+
 alpha_BAB_lh_12_CAPM = np.subtract(np.multiply(np.divide(1, beta_BAB_lb_12), alpha_BAB_lb_12_CAPM),
                                    np.multiply(np.divide(1, beta_BAB_hb_12), alpha_BAB_hb_12_CAPM))
 alpha_BAB_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAB_lb_12), alpha_BAB_lb_12_FF5),
@@ -373,17 +373,17 @@ alpha_BAB_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAB_lb_12), alph
 alpha_BAB_lh_12_Car = np.subtract(np.multiply(np.divide(1, beta_BAB_lb_12), alpha_BAB_lb_12_Car),
                                   np.multiply(np.divide(1, beta_BAB_hb_12), alpha_BAB_hb_12_Car))
 alpha_BAB_lh_12_CAPM.mean()
-# -0.01467648374078989
+
 alpha_BAB_lh_12_FF5.mean()
-# -0.066727569499020492
+
 alpha_BAB_lh_12_Car.mean()
-# -0.043721361581333537
+
 
 totalret_BAB_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAB_lb_12), totalret_BAB_lb_12),
                                  np.multiply(np.divide(1, beta_BAB_hb_12), totalret_BAB_hb_12))
 sharpe_BAB_lh_12 = np.divide(excess_BAB_lh_12.mean(), np.std(totalret_BAB_lh_12))
 sharpe_BAB_lh_12
-# 0.24992789814101473
+
 
 ##################################################################################################
 
@@ -393,40 +393,40 @@ sharpe_BAB_lh_12
 wl_BAA_12 = rebalance(wl_BAA, 48)
 excess_BAA_lb_12 = np.subtract(np.multiply(wl_BAA_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAA_lb_12.mean()
-# 0.0038461156837703986
+
 alpha_BAA_lb_12_CAPM = np.multiply(wl_BAA_12, alpha_CAPM).sum(axis=1)
 alpha_BAA_lb_12_FF5 = np.multiply(wl_BAA_12, alpha_FF5).sum(axis=1)
 alpha_BAA_lb_12_Car = np.multiply(wl_BAA_12, alpha_Car).sum(axis=1)
 alpha_BAA_lb_12_CAPM.mean()
-#- 0.014922947112765168
+
 alpha_BAA_lb_12_FF5.mean()
-# -0.010234836140384193
+
 alpha_BAA_lb_12_Car.mean()
-# -0.0088476959018826632
+
 totalret_BAA_lb_12 = np.multiply(wl_BAA_12, stockret).sum(axis=1)
 sharpe_BAA_lb_12 = np.divide(excess_BAA_lb_12.mean(), np.std(totalret_BAA_lb_12))
 sharpe_BAA_lb_12
-# 0.067586769994349233
+
 
 
 # High Alpha
 wh_BAA_12 = rebalance(wh_BAA, 48)
 excess_BAA_hb_12 = np.subtract(np.multiply(wh_BAA_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAA_hb_12.mean()
-# 0.012209838619690693
+
 alpha_BAA_hb_12_CAPM = np.multiply(wh_BAA_12, alpha_CAPM).sum(axis=1)
 alpha_BAA_hb_12_FF5 = np.multiply(wh_BAA_12, alpha_FF5).sum(axis=1)
 alpha_BAA_hb_12_Car = np.multiply(wh_BAA_12, alpha_Car).sum(axis=1)
 alpha_BAA_hb_12_CAPM.mean()
-# 0.024663855700328269
+
 alpha_BAA_hb_12_FF5.mean()
-# 0.014101118130967568
+
 alpha_BAA_hb_12_Car.mean()
-# 0.016158767164277242
+
 totalret_BAA_hb_12 = np.multiply(wh_BAA_12, stockret).sum(axis=1)
 sharpe_BAA_hb_12 = np.divide(excess_BAA_hb_12.mean(), np.std(totalret_BAA_hb_12))
 sharpe_BAA_hb_12
-# 0.23096055098719848
+
 
 # Low - High
 beta_BAA_lb_12 = rebalance(beta_L, 48)
@@ -434,7 +434,7 @@ beta_BAA_hb_12 = rebalance(beta_H, 48)
 excess_BAA_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAA_lb_12), excess_BAA_lb_12),
                                np.multiply(np.divide(1, beta_BAA_hb_12), excess_BAA_hb_12))
 excess_BAA_lh_12.mean()
-# 0.049546053195558888
+
 alpha_BAA_lh_12_CAPM = np.subtract(np.multiply(np.divide(1, beta_BAA_lb_12), alpha_BAA_lb_12_CAPM),
                                    np.multiply(np.divide(1, beta_BAA_hb_12), alpha_BAA_hb_12_CAPM))
 alpha_BAA_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAA_lb_12), alpha_BAA_lb_12_FF5),
@@ -442,17 +442,16 @@ alpha_BAA_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAA_lb_12), alph
 alpha_BAA_lh_12_Car = np.subtract(np.multiply(np.divide(1, beta_BAA_lb_12), alpha_BAA_lb_12_Car),
                                    np.multiply(np.divide(1, beta_BAA_hb_12), alpha_BAA_hb_12_Car))
 alpha_BAA_lh_12_CAPM.mean()
-# 0.094959377786873439
+
 alpha_BAA_lh_12_FF5.mean()
-# 0.044356727491873853
+
 alpha_BAA_lh_12_Car.mean()
-# 0.019306769717355763
+
 
 totalret_BAA_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAA_lb_12), totalret_BAA_lb_12),
                                  np.multiply(np.divide(1, beta_BAA_hb_12), totalret_BAA_hb_12))
 sharpe_BAA_lh_12 = np.divide(excess_BAA_lh_12.mean(), np.std(totalret_BAA_lh_12))
 sharpe_BAA_lh_12
-# 0.028440843189210831
 
 
 ##################################################################################################
@@ -464,40 +463,40 @@ sharpe_BAA_lh_12
 wlalb_BAAB_12 = rebalance(wlalb_BAAB, 48)
 excess_BAAB_lalb_12 = np.subtract(np.multiply(wlalb_BAAB_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAAB_lalb_12.mean()
-# 0.0038461156837703986
+
 alpha_BAAB_lalb_12_CAPM = np.multiply(wlalb_BAAB_12, alpha_CAPM).sum(axis=1)
 alpha_BAAB_lalb_12_FF5 = np.multiply(wlalb_BAAB_12, alpha_FF5).sum(axis=1)
 alpha_BAAB_lalb_12_Car = np.multiply(wlalb_BAAB_12, alpha_Car).sum(axis=1)
 alpha_BAAB_lalb_12_CAPM.mean()
-#- 0.014922947112765168
+
 alpha_BAAB_lalb_12_FF5.mean()
-# -0.010234836140384193
+
 alpha_BAAB_lalb_12_Car.mean()
-# -0.0088476959018826632
+
 totalret_BAAB_lalb_12 = np.multiply(wlalb_BAAB_12, stockret).sum(axis=1)
 sharpe_BAAB_lalb_12 = np.divide(excess_BAAB_lalb_12.mean(), np.std(totalret_BAAB_lalb_12))
 sharpe_BAAB_lalb_12
-# 0.067586769994349233
+
 
 
 # High Alpha
 whalb_BAAB_12 = rebalance(whalb_BAAB, 48)
 excess_BAAB_halb_12 = np.subtract(np.multiply(whalb_BAAB_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAAB_halb_12.mean()
-# 0.012209838619690693
+
 alpha_BAAB_halb_12_CAPM = np.multiply(whalb_BAAB_12, alpha_CAPM).sum(axis=1)
 alpha_BAAB_halb_12_FF5 = np.multiply(whalb_BAAB_12, alpha_FF5).sum(axis=1)
 alpha_BAAB_halb_12_Car = np.multiply(whalb_BAAB_12, alpha_Car).sum(axis=1)
 alpha_BAAB_halb_12_CAPM.mean()
-# 0.024663855700328269
+
 alpha_BAAB_halb_12_FF5.mean()
-# 0.014101118130967568
+
 alpha_BAAB_halb_12_Car.mean()
-# 0.016158767164277242
+
 totalret_BAAB_halb_12 = np.multiply(whalb_BAAB_12, stockret).sum(axis=1)
 sharpe_BAAB_halb_12 = np.divide(excess_BAAB_halb_12.mean(), np.std(totalret_BAAB_halb_12))
 sharpe_BAAB_halb_12
-# 0.23096055098719848
+
 
 # Low - High
 beta_BAAB_lb_12 = rebalance(beta_L, 48)
@@ -505,7 +504,7 @@ beta_BAAB_hb_12 = rebalance(beta_H, 48)
 excess_BAAB_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), excess_BAAB_lalb_12),
                                np.multiply(np.divide(1, beta_BAAB_hb_12), excess_BAAB_halb_12))
 excess_BAAB_lh_12.mean()
-# 0.049546053195558888
+
 alpha_BAAB_lh_12_CAPM = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), alpha_BAAB_lalb_12_CAPM),
                                    np.multiply(np.divide(1, beta_BAAB_hb_12), alpha_BAAB_halb_12_CAPM))
 alpha_BAAB_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), alpha_BAAB_lalb_12_FF5),
@@ -513,17 +512,17 @@ alpha_BAAB_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), al
 alpha_BAAB_lh_12_Car = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), alpha_BAAB_lalb_12_Car),
                                    np.multiply(np.divide(1, beta_BAAB_hb_12), alpha_BAAB_halb_12_Car))
 alpha_BAAB_lh_12_CAPM.mean()
-# 0.094959377786873439
+
 alpha_BAAB_lh_12_FF5.mean()
-# 0.044356727491873853
+
 alpha_BAAB_lh_12_Car.mean()
-# 0.019306769717355763
+
 
 totalret_BAAB_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), totalret_BAAB_lalb_12),
                                  np.multiply(np.divide(1, beta_BAAB_hb_12), totalret_BAAB_halb_12))
 sharpe_BAAB_lh_12 = np.divide(excess_BAAB_lh_12.mean(), np.std(totalret_BAAB_lh_12))
 sharpe_BAAB_lh_12
-# 0.028440843189210831
+
 
 ##################################################################################################
 ## In the high beta portfolio
@@ -532,40 +531,40 @@ sharpe_BAAB_lh_12
 wlahb_BAAB_12 = rebalance(wlahb_BAAB, 48)
 excess_BAAB_lahb_12 = np.subtract(np.multiply(wlahb_BAAB_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAAB_lahb_12.mean()
-# 0.0038461156837703986
+
 alpha_BAAB_lahb_12_CAPM = np.multiply(wlahb_BAAB_12, alpha_CAPM).sum(axis=1)
 alpha_BAAB_lahb_12_FF5 = np.multiply(wlahb_BAAB_12, alpha_FF5).sum(axis=1)
 alpha_BAAB_lahb_12_Car = np.multiply(wlahb_BAAB_12, alpha_Car).sum(axis=1)
 alpha_BAAB_lahb_12_CAPM.mean()
-#- 0.014922947112765168
+
 alpha_BAAB_lahb_12_FF5.mean()
-# -0.010234836140384193
+
 alpha_BAAB_lahb_12_Car.mean()
-# -0.0088476959018826632
+
 totalret_BAAB_lahb_12 = np.multiply(wlahb_BAAB_12, stockret).sum(axis=1)
 sharpe_BAAB_lahb_12 = np.divide(excess_BAAB_lahb_12.mean(), np.std(totalret_BAAB_lahb_12))
 sharpe_BAAB_lahb_12
-# 0.067586769994349233
+
 
 
 # High Alpha
 whahb_BAAB_12 = rebalance(whahb_BAAB, 48)
 excess_BAAB_hahb_12 = np.subtract(np.multiply(whahb_BAAB_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAAB_hahb_12.mean()
-# 0.012209838619690693
+
 alpha_BAAB_hahb_12_CAPM = np.multiply(whahb_BAAB_12, alpha_CAPM).sum(axis=1)
 alpha_BAAB_hahb_12_FF5 = np.multiply(whahb_BAAB_12, alpha_FF5).sum(axis=1)
 alpha_BAAB_hahb_12_Car = np.multiply(whahb_BAAB_12, alpha_Car).sum(axis=1)
 alpha_BAAB_hahb_12_CAPM.mean()
-# 0.024663855700328269
+
 alpha_BAAB_hahb_12_FF5.mean()
-# 0.014101118130967568
+
 alpha_BAAB_hahb_12_Car.mean()
-# 0.016158767164277242
+
 totalret_BAAB_hahb_12 = np.multiply(whahb_BAAB_12, stockret).sum(axis=1)
 sharpe_BAAB_hahb_12 = np.divide(excess_BAAB_hahb_12.mean(), np.std(totalret_BAAB_hahb_12))
 sharpe_BAAB_hahb_12
-# 0.23096055098719848
+
 
 # Low - High
 beta_BAAB_lb_12 = rebalance(beta_L, 48)
@@ -573,7 +572,7 @@ beta_BAAB_hb_12 = rebalance(beta_H, 48)
 excess_BAAB_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), excess_BAAB_lahb_12),
                                np.multiply(np.divide(1, beta_BAAB_hb_12), excess_BAAB_hahb_12))
 excess_BAAB_lh_12.mean()
-# 0.049546053195558888
+
 alpha_BAAB_lh_12_CAPM = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), alpha_BAAB_lahb_12_CAPM),
                                    np.multiply(np.divide(1, beta_BAAB_hb_12), alpha_BAAB_hahb_12_CAPM))
 alpha_BAAB_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), alpha_BAAB_lahb_12_FF5),
@@ -581,17 +580,17 @@ alpha_BAAB_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), al
 alpha_BAAB_lh_12_Car = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), alpha_BAAB_lahb_12_Car),
                                    np.multiply(np.divide(1, beta_BAAB_hb_12), alpha_BAAB_hahb_12_Car))
 alpha_BAAB_lh_12_CAPM.mean()
-# 0.094959377786873439
+
 alpha_BAAB_lh_12_FF5.mean()
-# 0.044356727491873853
+
 alpha_BAAB_lh_12_Car.mean()
-# 0.019306769717355763
+
 
 totalret_BAAB_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), totalret_BAAB_lahb_12),
                                  np.multiply(np.divide(1, beta_BAAB_hb_12), totalret_BAAB_hahb_12))
 sharpe_BAAB_lh_12 = np.divide(excess_BAAB_lh_12.mean(), np.std(totalret_BAAB_lh_12))
 sharpe_BAAB_lh_12
-# 0.028440843189210831
+
 
 
 ##################################################################################################
@@ -601,40 +600,40 @@ sharpe_BAAB_lh_12
 wlalb_BAAB_12 = rebalance(wlalb_BAAB, 48)
 excess_BAAB_lalb_12 = np.subtract(np.multiply(wlalb_BAAB_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAAB_lalb_12.mean()
-# 0.0038461156837703986
+
 alpha_BAAB_lalb_12_CAPM = np.multiply(wlalb_BAAB_12, alpha_CAPM).sum(axis=1)
 alpha_BAAB_lalb_12_FF5 = np.multiply(wlalb_BAAB_12, alpha_FF5).sum(axis=1)
 alpha_BAAB_lalb_12_Car = np.multiply(wlalb_BAAB_12, alpha_Car).sum(axis=1)
 alpha_BAAB_lalb_12_CAPM.mean()
-#- 0.014922947112765168
+
 alpha_BAAB_lalb_12_FF5.mean()
-# -0.010234836140384193
+
 alpha_BAAB_lalb_12_Car.mean()
-# -0.0088476959018826632
+
 totalret_BAAB_lalb_12 = np.multiply(wlalb_BAAB_12, stockret).sum(axis=1)
 sharpe_BAAB_lalb_12 = np.divide(excess_BAAB_lalb_12.mean(), np.std(totalret_BAAB_lalb_12))
 sharpe_BAAB_lalb_12
-# 0.067586769994349233
+
 
 
 # High Alpha
 whahb_BAAB_12 = rebalance(whahb_BAAB, 48)
 excess_BAAB_hahb_12 = np.subtract(np.multiply(whahb_BAAB_12, stockret).sum(axis=1), rf.ix[:, 0])
 excess_BAAB_hahb_12.mean()
-# 0.012209838619690693
+
 alpha_BAAB_hahb_12_CAPM = np.multiply(whahb_BAAB_12, alpha_CAPM).sum(axis=1)
 alpha_BAAB_hahb_12_FF5 = np.multiply(whahb_BAAB_12, alpha_FF5).sum(axis=1)
 alpha_BAAB_hahb_12_Car = np.multiply(whahb_BAAB_12, alpha_Car).sum(axis=1)
 alpha_BAAB_hahb_12_CAPM.mean()
-# 0.024663855700328269
+
 alpha_BAAB_hahb_12_FF5.mean()
-# 0.014101118130967568
+
 alpha_BAAB_hahb_12_Car.mean()
-# 0.016158767164277242
+
 totalret_BAAB_hahb_12 = np.multiply(whahb_BAAB_12, stockret).sum(axis=1)
 sharpe_BAAB_hahb_12 = np.divide(excess_BAAB_hahb_12.mean(), np.std(totalret_BAAB_hahb_12))
 sharpe_BAAB_hahb_12
-# 0.23096055098719848
+
 
 # Low - High
 beta_BAAB_lb_12 = rebalance(beta_L, 48)
@@ -642,7 +641,7 @@ beta_BAAB_hb_12 = rebalance(beta_H, 48)
 excess_BAAB_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), excess_BAAB_lalb_12),
                                np.multiply(np.divide(1, beta_BAAB_hb_12), excess_BAAB_hahb_12))
 excess_BAAB_lh_12.mean()
-# 0.049546053195558888
+
 alpha_BAAB_lh_12_CAPM = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), alpha_BAAB_lalb_12_CAPM),
                                    np.multiply(np.divide(1, beta_BAAB_hb_12), alpha_BAAB_hahb_12_CAPM))
 alpha_BAAB_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), alpha_BAAB_lalb_12_FF5),
@@ -650,17 +649,17 @@ alpha_BAAB_lh_12_FF5 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), al
 alpha_BAAB_lh_12_Car = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), alpha_BAAB_lalb_12_Car),
                                    np.multiply(np.divide(1, beta_BAAB_hb_12), alpha_BAAB_hahb_12_Car))
 alpha_BAAB_lh_12_CAPM.mean()
-# 0.094959377786873439
+
 alpha_BAAB_lh_12_FF5.mean()
-# 0.044356727491873853
+
 alpha_BAAB_lh_12_Car.mean()
-# 0.019306769717355763
+
 
 totalret_BAAB_lh_12 = np.subtract(np.multiply(np.divide(1, beta_BAAB_lb_12), totalret_BAAB_lalb_12),
                                  np.multiply(np.divide(1, beta_BAAB_hb_12), totalret_BAAB_hahb_12))
 sharpe_BAAB_lh_12 = np.divide(excess_BAAB_lh_12.mean(), np.std(totalret_BAAB_lh_12))
 sharpe_BAAB_lh_12
-# 0.028440843189210831
+
 
 
 ##################################################################################################
